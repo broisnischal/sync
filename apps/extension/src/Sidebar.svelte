@@ -3,7 +3,7 @@
   import { onMount } from "svelte";
   let name = "";
   let email = "";
-  let users: User[] = $state([]);
+  let users: User[] = [];
 
   async function addUser() {
     await db.users.add({
@@ -21,15 +21,13 @@
   });
 </script>
 
-<!-- svelte-ignore event_directive_deprecated -->
 <form on:submit|preventDefault={addUser} style="margin-bottom: 1em;">
   <input bind:value={name} placeholder="Name" required />
   <input bind:value={email} placeholder="Email" required />
   <button type="submit">Add User</button>
 </form>
 
-<p>Users count: {users.length}</p>
-<ul class="list-disc">
+<ul>
   {#each users as user}
     <li>{user.name} ({user.email})</li>
   {/each}

@@ -11,7 +11,8 @@
     "build:edge": "vite build && node scripts/manifest-edge.js"
   },
   "dependencies": {
-    "webextension-polyfill": "^0.10.0"
+    "webextension-polyfill": "^0.10.0",
+    "@sync/db": "workspace:*"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^3.0.2",
