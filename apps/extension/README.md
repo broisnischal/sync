@@ -183,6 +183,23 @@ module.exports = {
 
 ---
 
+## Cross-Browser Build Support
+
+This extension supports building for Chrome, Edge, and Firefox:
+
+- **Chrome/Chromium**: `pnpm build:chrome`
+- **Edge**: `pnpm build:edge`
+- **Firefox**: `pnpm build:firefox` (outputs a signed .xpi in `web-ext-artifacts/`)
+
+Each build script generates the correct `manifest.json` for the target browser in the `dist/` directory.
+
+- Uses [`webextension-polyfill`](https://github.com/mozilla/webextension-polyfill) for unified browser API support.
+- Uses [`web-ext`](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/) for Firefox packaging.
+
+See the `scripts/` directory for manifest generation scripts.
+
+---
+
 ## 🔧 Configuration
 
 ### Vite Configuration (`vite.config.ts`)
