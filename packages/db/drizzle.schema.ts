@@ -5,4 +5,4 @@ export const users = pgTable('users', {
     name: text('name'),
     email: varchar('email', { length: 256 }),
     createdAt: timestamp('created_at').defaultNow(),
-}); 
+});
