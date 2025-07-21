@@ -14,7 +14,10 @@
     "allowJs": true,
     "checkJs": true,
     "isolatedModules": true,
-    "moduleDetection": "force"
+    "moduleDetection": "force",
+    "types": [
+      "chrome"
+    ]
   },
   "include": [
     "src/**/*.ts",

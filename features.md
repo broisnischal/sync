@@ -9,3 +9,6 @@ bookmark, post, context, with that and search/filter by date, search ( with ai r
 
 
 better view on the devtools like localstorage, cookies and so more, basically a studio for - localstorage, cookies, and more setting of the browser ( inspector tool ) project
+
+pnpm add @types/chrome -D --filter @sync
+/extension
