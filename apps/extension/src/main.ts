@@ -7,4 +7,4 @@ if (!target) {
   throw new Error('Could not find app container')
 }
 
-mount(App, { target })
+mount(App, { target }) 

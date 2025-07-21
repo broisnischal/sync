@@ -1,5 +1,6 @@
 import { defineManifest } from "@crxjs/vite-plugin";
 import packageJson from "../package.json";
+import { env } from "process";
 
 const { version } = packageJson;
 
@@ -12,8 +13,11 @@ const [major, minor, patch] = version
 
 export default defineManifest(async () => ({
     manifest_version: 3,
-    name: "Svelte Side Panel Extension",
-    description: "A Chrome extension with side panel built using Svelte",
+    name:
+        env.mode === 'development'
+            ? `DEV: ${packageJson.name}`
+            : packageJson.name,
+    description: packageJson.description,
     version: `${major}.${minor}.${patch}`,
     version_name: version,
     "icons": {
@@ -40,14 +44,11 @@ export default defineManifest(async () => ({
     //     page: "src/options/options.html",
     //     open_in_tab: false,
     // },
-    // action: {
-    //     default_popup: "src/popup/popup.html",
-    //     default_icon: {
-    //         "16": "src/assets/icons/icon-16.png",
-    //         "32": "src/assets/icons/icon-32.png",
-    //         "48": "src/assets/icons/icon-48.png",
-    //         "128": "src/assets/icons/icon-128.png",
-    //     },
-    // },
+    action: {
+        default_popup: 'src/pages/popup/index.html',
+        default_icon: {
+            '128': 'icons/icon128.png'
+        }
+    },
     permissions: ["storage", "sidePanel", "activeTab", "bookmarks"] as chrome.runtime.ManifestPermissions[],
 }));

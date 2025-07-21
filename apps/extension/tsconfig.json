@@ -17,11 +17,27 @@
     "moduleDetection": "force",
     "types": [
       "chrome"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "$lib": [
+        "src/lib"
+      ],
+      "$lib/*": [
+        "src/lib/*"
+      ],
+      "~/*": [
+        "src/*"
+      ]
+    }
   },
   "include": [
-    "src/**/*.ts",
+    "src/**/*.d.ts",
     "src/**/*.js",
+    "src/**/*.ts",
     "src/**/*.svelte"
   ],
   "references": [

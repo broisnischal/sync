@@ -6,6 +6,6 @@ export default {
     runes: true,
     compatibility: {
       componentApi: 5
-    }
+    },
   }
 }
