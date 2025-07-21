@@ -19,7 +19,7 @@ export function persistentStore<T>(key: string, initialValue: T): Writable<T> {
 
     function watchChromeStorage() {
         chrome.storage.sync.onChanged.addListener((changes) => {
-            if (Object.hasOwn(changes, key)) {
+            if (Object.prototype.hasOwnProperty.call(changes, key)) {
                 store.set(changes[key].newValue);
             }
         });
@@ -27,7 +27,7 @@ export function persistentStore<T>(key: string, initialValue: T): Writable<T> {
 
     function initStoreFromChromeStorage() {
         chrome.storage.sync.get(key).then((result) => {
-            if (Object.hasOwn(result, key)) {
+            if (Object.prototype.hasOwnProperty.call(result, key)) {
                 store.set(result[key]);
             }
         });

@@ -6,9 +6,12 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "strict": true,
-    // "noEmit": true
+    "types": [
+      "chrome"
+    ]
   },
   "include": [
-    "vite.config.ts"
+    "vite.config.ts",
+    "src/**/*.ts"
   ]
 }
