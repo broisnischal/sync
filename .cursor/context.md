@@ -21,7 +21,7 @@ Build a privacy-focused, real-time sync extension that works across major browse
 - Edge
 - Arc
 - Opera
-- Zen (or Chromium variants)
+- Zen
 
 ## 🧰 Key Features
 
@@ -52,12 +52,12 @@ browser-sync-extension/
 │ └── utils/ # Auth, crypto, QR, etc.
 └── turbo.json
 
-
 ---
 
 ## 🧩 Technology Stack
 
 ### 🔧 Backend
+
 - **Framework**: Hono (tiny, fast, composable)
 - **Auth**: Google OAuth 2.0 + QR-based session login
 - **ORM**: Drizzle with PostgreSQL
@@ -66,6 +66,7 @@ browser-sync-extension/
 - **WebSockets**: Native `ws` or Hono + Bun/WebSocket servers
 
 ### 💡 Frontend (Extension)
+
 - Vite + TypeScript
 - IndexedDB (via `idb` or `Dexie.js`)
 - WebExtension APIs (unified via `webextension-polyfill`)
@@ -77,12 +78,14 @@ browser-sync-extension/
 ## 📦 SaaS Model
 
 ### Free Tier
+
 - Bookmark sync only
 - Max 2 devices
 - Limited storage
 - Manual sync (no real-time)
 
 ### Premium Tier
+
 - Unlimited devices
 - Real-time sync for all features
 - Priority sync queue and faster socket throughput
@@ -92,12 +95,12 @@ browser-sync-extension/
 
 ## 💽 Data Layer
 
-| Layer         | Purpose                             | Tech                    |
-|---------------|--------------------------------------|-------------------------|
-| **IndexedDB** | Offline-first local store            | Dexie.js / idb          |
-| **Redis**     | Real-time channel, session QR store  | Redis pub/sub           |
-| **PostgreSQL**| Encrypted persistent data store      | Drizzle ORM             |
-| **WebSockets**| Real-time device sync                | `ws` + Redis channels   |
+| Layer          | Purpose                             | Tech                  |
+| -------------- | ----------------------------------- | --------------------- |
+| **IndexedDB**  | Offline-first local store           | Dexie.js / idb        |
+| **Redis**      | Real-time channel, session QR store | Redis pub/sub         |
+| **PostgreSQL** | Encrypted persistent data store     | Drizzle ORM           |
+| **WebSockets** | Real-time device sync               | `ws` + Redis channels |
 
 ---
 

@@ -1,5 +1,5 @@
 <script lang="ts"> 
-  import { db, type User } from "@sync/db/src/dexie.schema";
+  import { db, type User } from "@sync/db/dexie.schema";
   import { onMount } from "svelte";
   let name = $state("");
   let email = $state("");
@@ -58,3 +58,4 @@
     // fetchBookmarks();
   }}>fetch Bookmarks</button
 >
+ 
