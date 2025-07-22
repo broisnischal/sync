@@ -1,9 +1,16 @@
 {
-    "name": "@sync/db",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "drizzle-orm": "^0.30.10",
-        "dexie": "^3.2.4"
-    }
+  "name": "@sync/db",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "dexie": "^3.2.4",
+    "drizzle-kit": "^0.31.4",
+    "drizzle-orm": "^0.44.2",
+    "drizzle-seed": "^0.3.1",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.15.4"
+  }
 }
