@@ -1,14 +1,14 @@
-<script lang="ts"> 
+<script lang="ts">
   import { db, type User } from "@sync/db/dexie.schema";
   import { onMount } from "svelte";
   let name = $state("");
   let email = $state("");
   let users: User[] = $state([]);
 
-  async function addUser() {  
-    await db.users.add({  
-      name, 
-      email, 
+  async function addUser() {
+    await db.users.add({
+      name,
+      email,
       createdAt: new Date(),
     });
     name = "";
@@ -53,9 +53,4 @@
   {/each}
 </ul>
 
-<button
-  onclick={() => {
-    // fetchBookmarks();
-  }}>fetch Bookmarks</button
->
- 
+<button onclick={() => {}}>fetch Bookmarks</button>

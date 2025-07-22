@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "target": "ESNext",
     "module": "NodeNext",
@@ -12,5 +13,7 @@
     "jsxImportSource": "hono/jsx",
     "outDir": "./dist"
   },
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

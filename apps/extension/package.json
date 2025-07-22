@@ -14,11 +14,12 @@
   "dependencies": {
     "@crxjs/vite-plugin": "^2.0.3",
     "@sync/db": "workspace:*",
+    "axios": "^1.10.0",
     "vite-tsconfig-paths": "^5.1.4",
     "webextension-polyfill": "^0.10.0"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^3.0.2",
+    "@sveltejs/vite-plugin-svelte": "^4.0.0-next.6",
     "@tsconfig/svelte": "^5.0.2",
     "@types/chrome": "^0.1.1",
     "autoprefixer": "^10.4.18",
