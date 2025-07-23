@@ -14,7 +14,7 @@
   "dependencies": {
     "@crxjs/vite-plugin": "^2.0.3",
     "@sync/db": "workspace:*",
-    "axios": "^1.10.0",
+    "axios": "^1.11.0",
     "vite-tsconfig-paths": "^5.1.4",
     "webextension-polyfill": "^0.10.0"
   },
